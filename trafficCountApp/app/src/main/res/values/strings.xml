@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TrafficCountApp</string>
+    <string name="screen_name">User Settings</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Preference Strings -->
+    <string name="application_preferences">Application Preferences</string>
+    <string name="title_username_preference">User Name</string>
+    <string name="summary_username_preference">enter user name here</string>
+    <string name="dialog_title_username_preference">Enter your user name</string>
+    <string name="title_password_preference">Password</string>
+    <string name="summary_password_preference">cvfdfdfdfdff</string>
+    <string name="dialog_title_password_preference">Enter your password</string>
+    <string name="title_email_preference">Email</string>
+    <string name="summary_email_preference">enter email here</string>
+    <string name="dialog_title_email_preference">Enter your email</string>
+    <string name="title_student_member_preference">Student Member</string>
+
+
+
+</resources>
