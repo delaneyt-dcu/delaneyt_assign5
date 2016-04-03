@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_above="@+id/saveDataButton"
+        android:baselineAligned="false">
+
+        <fragment android:name="com.example.delaneyt.trafficcountapp.TJunctionFrag"
+            android:id="@+id/t_jnt"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            tools:layout="@layout/fragment_t_junction" />
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rugby_reset_button"
+        android:id="@+id/resetButton"
+        android:layout_alignTop="@+id/saveDataButton"
+        android:layout_toLeftOf="@+id/saveDataButton"
+        android:layout_toStartOf="@+id/saveDataButton"
+        android:minWidth="100dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_data_button"
+        android:id="@+id/saveDataButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:minWidth="100dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rugby_email_button"
+        android:id="@+id/emailButton"
+        android:layout_alignTop="@+id/saveDataButton"
+        android:layout_toRightOf="@+id/saveDataButton"
+        android:layout_toEndOf="@+id/saveDataButton"
+        android:minWidth="100dp" />
+
+</RelativeLayout>

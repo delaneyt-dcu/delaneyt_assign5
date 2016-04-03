@@ -25,3 +25,18 @@ Work to be done next:
 	Check out how to create (and maybe create) database tables on Azure;
 	Update Report;
 	Upload to GitHub.
+
+160403 - Second Commit
+Work done to-date:
+	Finished coding all preference screens;
+	90% coding main counting screen for a T-Junction complete;
+	Had saved data to file internally but decided to abandon this for a database;
+	Started to create a SQLite database tables;
+	Did not update Report;
+	Uploaded to GitHub;
+Work to be done next:
+	Finish coding SQLite database;
+	Start coding next counting screen for a cross-Junction;
+	Figure out how to align text vertically or use alternate way
+	Figure out how to use button in preference screen
+	Upload to GitHub.

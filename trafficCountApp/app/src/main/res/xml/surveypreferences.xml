@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/survey_detail_preferences">
+        <EditTextPreference
+            android:key="date_preference"
+            android:title="@string/title_date_preference"
+            android:summary="@string/summary_date_preference"
+            android:dialogTitle="@string/dialog_date_preference" />
+        <EditTextPreference
+            android:key="start_time_preference"
+            android:title="@string/title_start_time_preference"
+            android:summary="@string/summary_start_time_preference"
+            android:dialogTitle="@string/dialog_start_time_preference" />
+        <EditTextPreference
+            android:key="end_time_preference"
+            android:title="@string/title_end_time_preference"
+            android:summary="@string/summary_end_time_preference"
+            android:dialogTitle="@string/dialog_end_time_preference" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/optional_survey_detail_preferences">
+        <ListPreference
+            android:key="weather_preference"
+            android:title="@string/title_weather_preference"
+            android:summary="@string/summary_weather_preference"
+            android:defaultValue="1"
+            android:entries="@array/weatherArray"
+            android:entryValues="@array/weatherValues" />
+        <ListPreference
+            android:key="surface_preference"
+            android:title="@string/title_surface_preference"
+            android:summary="@string/summary_surface_preference"
+            android:defaultValue="1"
+            android:entries="@array/surfaceArray"
+            android:entryValues="@array/surfaceValues" />
+    </PreferenceCategory>
+</PreferenceScreen>

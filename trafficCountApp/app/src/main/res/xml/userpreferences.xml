@@ -1,29 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-        android:title="@string/application_preferences">
+        android:title="@string/user_detail_preferences">
 
+        <CheckBoxPreference
+            android:key="employee_member_preference"
+            android:title="@string/title_employee_member_preference"/>
+        <EditTextPreference
+            android:key="employee_number_preference"
+            android:title="@string/title_employee_number_preference"
+            android:summary="@string/summary_employee_number_preference"
+            android:dialogTitle="@string/dialog_title_employee_number_preference" />
         <EditTextPreference
             android:key="username_preference"
             android:title="@string/title_username_preference"
             android:summary="@string/summary_username_preference"
             android:dialogTitle="@string/dialog_title_username_preference" />
+    </PreferenceCategory>
 
-        <EditTextPreference
-            android:key="password_preference"
-            android:title="@string/title_password_preference"
-            android:inputType="textPassword"
-            android:dialogTitle="@string/dialog_title_password_preference" />
-
+    <PreferenceCategory
+        android:title="@string/opional_user_detail_preferences">
+        <ListPreference
+            android:key="employment_grade_preference"
+            android:title="@string/title_employment_grade_preference"
+            android:summary="@string/summary_employment_grade_preference"
+            android:defaultValue="1"
+            android:entries="@array/gradeArray"
+            android:entryValues="@array/gradeValues" />
         <EditTextPreference
             android:key="email_preference"
             android:title="@string/title_email_preference"
             android:summary="@string/summary_email_preference"
             android:inputType="textEmailAddress"
             android:dialogTitle="@string/dialog_title_email_preference" />
-
-        <CheckBoxPreference
-            android:key="student_member_preference"
-            android:title="@string/title_student_member_preference"/>
     </PreferenceCategory>
+    <!--
+       <PreferenceCategory
+           android:title="@string/location_detail_preferences">
+           <PreferenceScreen
+               android:key="next_button"
+               android:title="@string/title_next_preference"
+               android:summary="@string/summary_next_preference"
+              android:widgetLayout="@layout/preference_next_button">
+        <intent
+            android:action="com.example.delaneyt.trafficcountapp.LocationSettingActivity"
+            android:targetPackage="com.example.delaneyt.trafficcountapp"
+            android:targetClass="com.example.delaneyt.trafficcountapp.LocationSettingActivity"
+            />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
+
+        <PreferenceCategory android:title="@string/title_next_preference">
+        </PreferenceCategory>
+        <PreferenceScreen android:key="@string/title_next_preference" android:title="@string/title_next_preference" android:summary="@string/title_next_preference">
+            <intent android:action="android.intent.action.VIEW" android:targetPackage="com.example.delaneyt.trafficcountapp" android:targetClass="com.example.delaneyt.trafficcountapp.LocationSettingActivity" />
+        </PreferenceScreen>
+
+    -->
+
+
+
+
+
 </PreferenceScreen>

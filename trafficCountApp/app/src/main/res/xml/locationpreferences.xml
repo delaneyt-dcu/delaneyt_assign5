@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/location_detail_preferences">
+        <EditTextPreference
+            android:key="town_preference"
+            android:title="@string/title_town_preference"
+            android:summary="@string/summary_town_preference"
+            android:dialogTitle="@string/dialog_title_town_preference" />
+        <EditTextPreference
+            android:key="county_preference"
+            android:title="@string/title_county_preference"
+            android:summary="@string/summary_county_preference"
+            android:dialogTitle="@string/dialog_title_county_preference" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/title_junction_arm_preference">
+        <PreferenceScreen
+            android:key="junction_arm_category"
+            android:title="@string/title_junction_arm_preference"
+            android:persistent="false">
+            <EditTextPreference
+                android:key="arm1_preference"
+                android:title="@string/title_arm1_preference"
+                android:summary="@string/summary_arm1_preference"
+                android:dialogTitle="@string/dialog_arm1_preference" />
+            <EditTextPreference
+                android:key="arm2_preference"
+                android:title="@string/title_arm2_preference"
+                android:summary="@string/summary_arm2_preference"
+                android:dialogTitle="@string/dialog_arm2_preference" />
+            <EditTextPreference
+                android:key="arm3_preference"
+                android:title="@string/title_arm3_preference"
+                android:summary="@string/summary_arm3_preference"
+                android:dialogTitle="@string/dialog_arm3_preference" />
+            <EditTextPreference
+                android:key="arm4_preference"
+                android:title="@string/title_arm4_preference"
+                android:summary="@string/summary_arm4_preference"
+                android:dialogTitle="@string/dialog_arm4_preference" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/optional_location_detail_preferences">
+        <Preference
+            android:key="gps_button"
+            android:title="@string/title_gps_preference"
+            android:summary="@string/summary_gps_preference"
+            android:widgetLayout="@layout/preference_gps_button"/>
+        <Preference
+            android:key="photo_button"
+            android:title="@string/title_photo_preference"
+            android:summary="@string/summary_photo_preference"
+            android:widgetLayout="@layout/preference_photo_button"/>
+    </PreferenceCategory>
+    <!--
+       <PreferenceCategory
+           android:title="@string/count_detail_preferences">
+           <Preference
+               android:key="next_button"
+               android:title="@string/title_count_next_preference"
+               android:summary="@string/summary_count_next_preference"
+               android:widgetLayout="@layout/preference_next_button"/>
+       </PreferenceCategory>
+       -->
+   </PreferenceScreen>

@@ -7,15 +7,11 @@ import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
- * Created by delaneyt on 13/03/2016.
+ * Created by delaneyt on 18/03/2016.
  */
-public class UserSettingsFrag extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class LocationSettingsFrag extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     /**
      * Sets the screen's view including tabs and fragment. No return.
@@ -28,35 +24,8 @@ public class UserSettingsFrag extends PreferenceFragment implements SharedPrefer
         super.onCreate(savedInstanceState);
 
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.userpreferences);
+        addPreferencesFromResource(R.xml.locationpreferences);
         getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
-
-
-//        Preference button = (Preference)getPreferenceManager().findPreference("next_button");
- //       if (button != null) {
- //           button.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
- //               @Override
- //               public boolean onPreferenceClick(Preference arg0) {
- //                   //finish();
-//                    Intent intent = new Intent(getActivity(), LocationSettingsActivity.class);
-//                    startActivity(intent);
-//                    return true;
-//                }
-//            });
-//        }
-
-//        Preference button = (Preference)findPreference("next_button");
-//        button.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
- //           @Override
- //           public boolean onPreferenceClick(Preference preference) {
-//                //code for what you want it to do
-//                Intent intent = new Intent(getActivity(), LocationSettingsActivity.class);
-//                    startActivity(intent);
-//                return true;
-//            }
-//        });
-
-
     }
 
     /**
@@ -107,43 +76,4 @@ public class UserSettingsFrag extends PreferenceFragment implements SharedPrefer
             }
         }
     }
-
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-
-//        View view = inflater.inflate(R.layout.preference_next_button, container, false);
-
-//        Button button = (Button)view.findViewById(R.id.nextButton);
-//        button.setOnClickListener(new View.OnClickListener()
- //       {
-//            @Override
-//            public void onClick(View v){
-//                switch(v.getId()){
-
-//                    case R.id.nextButton:
-//                        Intent intent = new Intent(getActivity(), LocationSettingsActivity.class);
-//                        startActivity(intent);
-//                        break;
-//                }
-//            }
-//        });
-
- //       return view;
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

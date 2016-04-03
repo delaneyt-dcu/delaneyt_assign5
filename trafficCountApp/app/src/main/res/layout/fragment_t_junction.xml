@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:background="@drawable/three_arm_jnt"
+tools:context=".MainActivity" >
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/rightImageButton"
+        android:background="@drawable/right_arrow"
+        android:contentDescription="@string/right"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/rightdownImageButton"
+        android:background="@drawable/rightdown_arrow"
+        android:contentDescription="@string/rightdown"
+        android:layout_below="@+id/rightImageButton"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignLeft="@+id/rightImageButton"
+        android:layout_marginTop="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/leftupImageButton"
+        android:background="@drawable/leftup_arrow"
+        android:contentDescription="@string/leftup"
+        android:layout_below="@+id/rightdownImageButton"
+        android:layout_toRightOf="@+id/rightdownImageButton"
+        android:layout_toEndOf="@+id/rightdownImageButton"
+        android:layout_margin="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/rightupImageButton"
+        android:background="@drawable/rightup_arrow"
+        android:contentDescription="@string/rightup"
+        android:layout_alignTop="@+id/leftupImageButton"
+        android:layout_toRightOf="@+id/leftupImageButton"
+        android:layout_toEndOf="@+id/leftupImageButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/leftImageButton"
+        android:background="@drawable/left_arrow"
+        android:contentDescription="@string/left"
+        android:layout_above="@+id/leftdownImageButton"
+        android:layout_alignRight="@+id/countALeftDownTextView"
+        android:layout_alignEnd="@+id/countALeftDownTextView"
+        android:layout_marginBottom="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/leftdownImageButton"
+        android:background="@drawable/leftdown_arrow"
+        android:contentDescription="@string/leftdown"
+        android:layout_above="@+id/rightupImageButton"
+        android:layout_toRightOf="@+id/rightupImageButton"
+        android:layout_toEndOf="@+id/rightupImageButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/countALeftTextView"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/leftImageButton"
+        android:layout_alignRight="@+id/leftImageButton"
+        android:layout_alignEnd="@+id/leftImageButton"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/countALeftDownTextView"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/leftdownImageButton"
+        android:layout_alignRight="@+id/leftdownImageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/countBRightUpTextView"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/rightupImageButton"
+        android:layout_alignLeft="@+id/rightupImageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/countBLeftUpTextView"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/leftupImageButton"
+        android:layout_alignRight="@+id/leftupImageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/countCRightDownTextView"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/rightdownImageButton"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignLeft="@+id/rightdownImageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/countCRightTextView"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/rightImageButton"
+        android:layout_alignLeft="@+id/rightImageButton"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/armB_name"
+        android:ems="10"
+        android:id="@+id/armBEditText"
+        android:layout_below="@+id/rightupImageButton"
+        android:layout_alignLeft="@+id/leftupImageButton"
+        android:layout_alignStart="@+id/leftupImageButton"
+        android:layout_alignRight="@+id/rightupImageButton"
+        android:layout_alignEnd="@+id/rightupImageButton"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:rotation="1"
+        android:id="@+id/editText"
+        android:layout_above="@+id/countCRightDownTextView"
+        android:layout_toLeftOf="@+id/leftImageButton"
+        android:layout_toStartOf="@+id/leftImageButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        android:id="@+id/button_add"
+        android:layout_below="@+id/countALeftTextView"
+        android:layout_centerHorizontal="true" />
+
+    <!--VerticalTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:background="@color/feedback_background"
+        android:padding="4dip"
+        android:text="@string/feedback"
+        android:textColor="@color/feedback_text_color"
+        android:textSize="@dimen/text_xlarge" />-->
+
+</RelativeLayout>
