@@ -98,7 +98,11 @@
     <string name="enter_arm_a">Arm A</string>
     <string name="enter_arm_b">Arm B</string>
     <string name="enter_arm_c">Arm C</string>
+    <string name="armA_name">Arm A</string>
     <string name="armB_name">Arm B</string>
+    <string name="armC_name">Arm C</string>
+    <string name="button_add">Add</string>
+    <string name="view_all">View All</string>
     <string name="count_text">0</string>
     <string name="right">right</string>
     <string name="rightdown">right down</string>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/four_arm_jnt"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButtonCtoA"
+        android:background="@drawable/right_arrow"
+        android:contentDescription="@string/right"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButton_CtoB"
+        android:background="@drawable/rightdown_arrow"
+        android:contentDescription="@string/rightdown"
+        android:layout_below="@+id/imageButtonCtoA"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignLeft="@+id/imageButtonCtoA"
+        android:layout_marginTop="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButton_BtoC"
+        android:background="@drawable/leftup_arrow"
+        android:contentDescription="@string/leftup"
+        android:layout_below="@+id/imageButton_CtoB"
+        android:layout_toRightOf="@+id/imageButton_CtoB"
+        android:layout_toEndOf="@+id/imageButton_CtoB"
+        android:layout_margin="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButton_BtoA"
+        android:background="@drawable/rightup_arrow"
+        android:contentDescription="@string/rightup"
+        android:layout_alignTop="@+id/imageButton_BtoC"
+        android:layout_toRightOf="@+id/imageButton_BtoC"
+        android:layout_toEndOf="@+id/imageButton_BtoC"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButton_AtoC"
+        android:background="@drawable/left_arrow"
+        android:contentDescription="@string/left"
+        android:layout_alignBottom="@+id/textViewVehsCtoA"
+        android:layout_toRightOf="@+id/imageButton_BtoA"
+        android:layout_toEndOf="@+id/imageButton_BtoA" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButton_AtoB"
+        android:background="@drawable/leftdown_arrow"
+        android:contentDescription="@string/leftdown"
+        android:layout_above="@+id/imageButton_BtoA"
+        android:layout_toRightOf="@+id/imageButton_BtoA"
+        android:layout_toEndOf="@+id/imageButton_BtoA"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/textViewVehsAtoC"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/imageButton_AtoC"
+        android:layout_alignRight="@+id/imageButton_AtoC"
+        android:layout_alignEnd="@+id/imageButton_AtoC"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/textViewVehsAtoB"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/imageButton_AtoB"
+        android:layout_alignLeft="@+id/textViewVehsAtoC"
+        android:layout_alignStart="@+id/textViewVehsAtoC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/textViewVehsBtoA"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageButton_BtoA"
+        android:layout_alignLeft="@+id/imageButton_BtoA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/textViewVehsBtoC"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageButton_BtoC"
+        android:layout_alignRight="@+id/imageButton_BtoC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/textViewVehsCtoB"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/imageButton_CtoB"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignLeft="@+id/imageButton_CtoB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/count_text"
+        android:id="@+id/textViewVehsCtoA"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/imageButtonCtoA"
+        android:layout_alignLeft="@+id/imageButtonCtoA"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:inputType="textPersonName"
+        android:text="@string/armA_name"
+        android:id="@+id/editTextArmAName"
+        android:layout_below="@+id/imageButton_AtoC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:inputType="textPersonName"
+        android:text="@string/armB_name"
+        android:ems="10"
+        android:id="@+id/editTextArmBName"
+        android:layout_below="@+id/imageButton_BtoA"
+        android:layout_alignLeft="@+id/imageButton_BtoC"
+        android:layout_alignStart="@+id/imageButton_BtoC"
+        android:layout_alignRight="@+id/imageButton_BtoA"
+        android:layout_alignEnd="@+id/imageButton_BtoA"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_alignParentEnd="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:inputType="textPersonName"
+        android:text="@string/armC_name"
+        android:ems="10"
+        android:rotation="1"
+        android:id="@+id/editTextArmCName"
+        android:layout_above="@+id/textViewVehsCtoB"
+        android:layout_toStartOf="@+id/button_AddToDb"
+        android:layout_toLeftOf="@+id/button_AddToDb"
+        android:layout_alignParentEnd="false"
+        android:layout_alignEnd="@+id/button_AddToDb"
+        android:layout_alignParentStart="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_all"
+        android:id="@+id/button_ViewAllData"
+        android:layout_below="@+id/imageButton_AtoC"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add"
+        android:id="@+id/button_AddToDb"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <!--
+           <VerticalTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left|center_vertical"
+               android:background="@color/feedback_background"
+               android:padding="4dip"
+               android:text="@string/feedback"
+               android:textColor="@color/feedback_text_color"
+               android:textSize="@dimen/text_xlarge" />-->
+
+</RelativeLayout>

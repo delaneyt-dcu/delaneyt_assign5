@@ -10,7 +10,7 @@ tools:context=".MainActivity" >
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/rightImageButton"
+        android:id="@+id/imageButtonCtoA"
         android:background="@drawable/right_arrow"
         android:contentDescription="@string/right"
         android:layout_alignParentBottom="false"
@@ -21,58 +21,57 @@ tools:context=".MainActivity" >
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/rightdownImageButton"
+        android:id="@+id/imageButton_CtoB"
         android:background="@drawable/rightdown_arrow"
         android:contentDescription="@string/rightdown"
-        android:layout_below="@+id/rightImageButton"
+        android:layout_below="@+id/imageButtonCtoA"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
-        android:layout_alignLeft="@+id/rightImageButton"
+        android:layout_alignLeft="@+id/imageButtonCtoA"
         android:layout_marginTop="10dp" />
 
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/leftupImageButton"
+        android:id="@+id/imageButton_BtoC"
         android:background="@drawable/leftup_arrow"
         android:contentDescription="@string/leftup"
-        android:layout_below="@+id/rightdownImageButton"
-        android:layout_toRightOf="@+id/rightdownImageButton"
-        android:layout_toEndOf="@+id/rightdownImageButton"
+        android:layout_below="@+id/imageButton_CtoB"
+        android:layout_toRightOf="@+id/imageButton_CtoB"
+        android:layout_toEndOf="@+id/imageButton_CtoB"
         android:layout_margin="10dp" />
 
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/rightupImageButton"
+        android:id="@+id/imageButton_BtoA"
         android:background="@drawable/rightup_arrow"
         android:contentDescription="@string/rightup"
-        android:layout_alignTop="@+id/leftupImageButton"
-        android:layout_toRightOf="@+id/leftupImageButton"
-        android:layout_toEndOf="@+id/leftupImageButton"
+        android:layout_alignTop="@+id/imageButton_BtoC"
+        android:layout_toRightOf="@+id/imageButton_BtoC"
+        android:layout_toEndOf="@+id/imageButton_BtoC"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
 
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/leftImageButton"
+        android:id="@+id/imageButton_AtoC"
         android:background="@drawable/left_arrow"
         android:contentDescription="@string/left"
-        android:layout_above="@+id/leftdownImageButton"
-        android:layout_alignRight="@+id/countALeftDownTextView"
-        android:layout_alignEnd="@+id/countALeftDownTextView"
-        android:layout_marginBottom="10dp" />
+        android:layout_alignBottom="@+id/textViewVehsCtoA"
+        android:layout_toRightOf="@+id/imageButton_BtoA"
+        android:layout_toEndOf="@+id/imageButton_BtoA" />
 
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/leftdownImageButton"
+        android:id="@+id/imageButton_AtoB"
         android:background="@drawable/leftdown_arrow"
         android:contentDescription="@string/leftdown"
-        android:layout_above="@+id/rightupImageButton"
-        android:layout_toRightOf="@+id/rightupImageButton"
-        android:layout_toEndOf="@+id/rightupImageButton"
+        android:layout_above="@+id/imageButton_BtoA"
+        android:layout_toRightOf="@+id/imageButton_BtoA"
+        android:layout_toEndOf="@+id/imageButton_BtoA"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp" />
 
@@ -81,13 +80,13 @@ tools:context=".MainActivity" >
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/count_text"
-        android:id="@+id/countALeftTextView"
+        android:id="@+id/textViewVehsAtoC"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/leftImageButton"
-        android:layout_alignRight="@+id/leftImageButton"
-        android:layout_alignEnd="@+id/leftImageButton"
+        android:layout_alignTop="@+id/imageButton_AtoC"
+        android:layout_alignRight="@+id/imageButton_AtoC"
+        android:layout_alignEnd="@+id/imageButton_AtoC"
         android:layout_marginTop="20dp" />
 
     <TextView
@@ -95,107 +94,134 @@ tools:context=".MainActivity" >
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/count_text"
-        android:id="@+id/countALeftDownTextView"
+        android:id="@+id/textViewVehsAtoB"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/leftdownImageButton"
-        android:layout_alignRight="@+id/leftdownImageButton" />
+        android:layout_alignTop="@+id/imageButton_AtoB"
+        android:layout_alignLeft="@+id/textViewVehsAtoC"
+        android:layout_alignStart="@+id/textViewVehsAtoC" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/count_text"
-        android:id="@+id/countBRightUpTextView"
+        android:id="@+id/textViewVehsBtoA"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_alignBottom="@+id/rightupImageButton"
-        android:layout_alignLeft="@+id/rightupImageButton" />
+        android:layout_alignBottom="@+id/imageButton_BtoA"
+        android:layout_alignLeft="@+id/imageButton_BtoA" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/count_text"
-        android:id="@+id/countBLeftUpTextView"
+        android:id="@+id/textViewVehsBtoC"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_alignBottom="@+id/leftupImageButton"
-        android:layout_alignRight="@+id/leftupImageButton" />
+        android:layout_alignBottom="@+id/imageButton_BtoC"
+        android:layout_alignRight="@+id/imageButton_BtoC" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/count_text"
-        android:id="@+id/countCRightDownTextView"
+        android:id="@+id/textViewVehsCtoB"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/rightdownImageButton"
+        android:layout_alignTop="@+id/imageButton_CtoB"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
-        android:layout_alignLeft="@+id/rightdownImageButton" />
+        android:layout_alignLeft="@+id/imageButton_CtoB" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/count_text"
-        android:id="@+id/countCRightTextView"
+        android:id="@+id/textViewVehsCtoA"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/rightImageButton"
-        android:layout_alignLeft="@+id/rightImageButton"
+        android:layout_alignTop="@+id/imageButtonCtoA"
+        android:layout_alignLeft="@+id/imageButtonCtoA"
         android:layout_marginTop="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:inputType="textPersonName"
+        android:text="@string/armA_name"
+        android:id="@+id/editTextArmAName"
+        android:layout_below="@+id/imageButton_AtoC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:inputType="textPersonName"
         android:text="@string/armB_name"
         android:ems="10"
-        android:id="@+id/armBEditText"
-        android:layout_below="@+id/rightupImageButton"
-        android:layout_alignLeft="@+id/leftupImageButton"
-        android:layout_alignStart="@+id/leftupImageButton"
-        android:layout_alignRight="@+id/rightupImageButton"
-        android:layout_alignEnd="@+id/rightupImageButton"
+        android:id="@+id/editTextArmBName"
+        android:layout_below="@+id/imageButton_BtoA"
+        android:layout_alignLeft="@+id/imageButton_BtoC"
+        android:layout_alignStart="@+id/imageButton_BtoC"
+        android:layout_alignRight="@+id/imageButton_BtoA"
+        android:layout_alignEnd="@+id/imageButton_BtoA"
         android:layout_marginTop="20dp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignParentEnd="false" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="@string/armC_name"
         android:ems="10"
         android:rotation="1"
-        android:id="@+id/editText"
-        android:layout_above="@+id/countCRightDownTextView"
-        android:layout_toLeftOf="@+id/leftImageButton"
-        android:layout_toStartOf="@+id/leftImageButton" />
+        android:id="@+id/editTextArmCName"
+        android:layout_above="@+id/textViewVehsCtoB"
+        android:layout_toStartOf="@+id/button_AddToDb"
+        android:layout_toLeftOf="@+id/button_AddToDb"
+        android:layout_alignParentEnd="false"
+        android:layout_alignEnd="@+id/button_AddToDb"
+        android:layout_alignParentStart="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Data"
-        android:id="@+id/button_add"
-        android:layout_below="@+id/countALeftTextView"
+        android:text="@string/view_all"
+        android:id="@+id/button_ViewAllData"
+        android:layout_below="@+id/imageButton_AtoC"
         android:layout_centerHorizontal="true" />
 
-    <!--VerticalTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|center_vertical"
-        android:background="@color/feedback_background"
-        android:padding="4dip"
-        android:text="@string/feedback"
-        android:textColor="@color/feedback_text_color"
-        android:textSize="@dimen/text_xlarge" />-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:id="@+id/button_AddToDb"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+ <!--
+        <VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:background="@color/feedback_background"
+            android:padding="4dip"
+            android:text="@string/feedback"
+            android:textColor="@color/feedback_text_color"
+            android:textSize="@dimen/text_xlarge" />-->
 
 </RelativeLayout>

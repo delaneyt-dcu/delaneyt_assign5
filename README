@@ -40,3 +40,25 @@ Work to be done next:
 	Figure out how to align text vertically or use alternate way
 	Figure out how to use button in preference screen
 	Upload to GitHub.
+
+160409 - Third Commit
+Work done this week:
+	Got the SQLite database to work
+	Tidied up member variables and now using a better naming convention
+	Uploaded to GitHub (i.e. 160409 - Third Commit)
+Work to be done next week:
+	Need to figure out how to setContentView to a certain fragment layout depending on what
+		junction type image is selected (using Extra and intent).
+		This is where I am at the moment:
+
+		imageView.setImageResource(intent.getIntExtra(JntTypeSelectFragment.EXTRA_RES_ID, 0));
+		if(???==0)
+    			setContentView(R.layout.frag_t_junct);
+
+		if(???==1)
+			setContentView(R.layout.frag_cross_junct);
+
+		if(???==2)
+			setContentView(R.layout.frag_cross_junct);
+		else
+			setContentView(R.layout.testing_fragment);

@@ -25,12 +25,12 @@ public class ActionTabsViewPagerAdapter extends FragmentPagerAdapter {
     public static final int LOCATION = 1;
     public static final int SURVEY = 2;
     public static final int JUNCTION = 3;
-    public static final int COUNT = 4;
+
     public static final String UI_TAB_USER = "USER";
     public static final String UI_TAB_LOCATION = "LOCATION";
     public static final String UI_TAB_SURVEY = "SURVEY";
     public static final String UI_TAB_JUNCTION = "JUNCTION";
-    public static final String UI_TAB_COUNT = "COUNT";
+
 
     /**
      * Receives fragment manager and array data and sets the context for this fragment
@@ -77,8 +77,7 @@ public class ActionTabsViewPagerAdapter extends FragmentPagerAdapter {
                 return UI_TAB_SURVEY;
             case JUNCTION:
                 return UI_TAB_JUNCTION;
-            case COUNT:
-                return UI_TAB_COUNT;
+
             default:
                 break;
         }

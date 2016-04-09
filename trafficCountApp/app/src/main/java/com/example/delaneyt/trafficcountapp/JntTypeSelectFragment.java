@@ -40,7 +40,7 @@ public class JntTypeSelectFragment extends Fragment {
     protected static final String EXTRA_RES_ID = "POS";
 
     // Creates an array of resource image files which is a private instance to this class
-    private ArrayList<Integer> mThumbIdsCars = new ArrayList<>(
+    private ArrayList<Integer> mThumbIdsJuntions = new ArrayList<>(
             Arrays.asList(R.drawable.three_arm_jnt, R.drawable.four_arm_jnt,
                     R.drawable.staggered_jnt));
 
@@ -64,7 +64,7 @@ public class JntTypeSelectFragment extends Fragment {
         // references the resource file to inflate view
         View rootView = inflater.inflate(R.layout.juntion_type_fragment, container, false);
         GridView gridview = (GridView) rootView.findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(getActivity(), mThumbIdsCars));
+        gridview.setAdapter(new ImageAdapter(getActivity(), mThumbIdsJuntions));
 
         // Set an setOnItemClickListener on the GridView
         gridview.setOnItemClickListener(new OnItemClickListener() {

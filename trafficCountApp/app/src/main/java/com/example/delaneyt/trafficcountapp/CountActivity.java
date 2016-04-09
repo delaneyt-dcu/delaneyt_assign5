@@ -1,14 +1,9 @@
 package com.example.delaneyt.trafficcountapp;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.EditTextPreference;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -29,6 +24,11 @@ import android.widget.ImageView;
  *  @see <a href="http://developer.android.com/guide/topics/ui/layout/gridview.html"</a>
  */
 public class CountActivity extends AppCompatActivity {
+    Button saveDataButton;
+    Button button_add;
+    String junctionSelected;
+
+
 
     /**
      * Saves the state of the application in a bundle based on the value of the savedInstance State
@@ -40,7 +40,8 @@ public class CountActivity extends AppCompatActivity {
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
+        //saveDataButton = (Button) View.findViewById(R.id.button_add);
+        //addData();
 
         //Debug Tag for use logging debug output to LogCat
         String TAG = "CountActivity";
@@ -57,10 +58,22 @@ public class CountActivity extends AppCompatActivity {
         // Get the ID of the image to display and set it as the image for this ImageView
         imageView.setImageResource(intent.getIntExtra(JntTypeSelectFragment.EXTRA_RES_ID, 0));
 
-        // Passes the imageView as an argument into the setContentView method
-        setContentView(R.layout.activity_count);
+        if(imageView==0)
+            setContentView(R.layout.frag_t_junct);
 
-    }
+        if(imageView.equals(1))
+            setContentView(R.layout.frag_cross_junct);
+
+        if(imageView.equals(2))
+            setContentView(R.layout.frag_cross_junct);
+        else
+            setContentView(R.layout.match_fragment);
+
+
+
+        // Passes the imageView as an argument into the setContentView method
+        //setContentView(junctionSelected);
+};
 
     /**
      * Returns user to previous screen with up arrow set to act like a back arrow in this case
