@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.delaneyt.trafficcountapp" >
-
-<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
-    </uses-permission> -->
+<manifest  xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.delaneyt.trafficcountapp">
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/-->
 
     <application
         android:allowBackup="true"
@@ -37,7 +39,8 @@
             android:name=".CountActivity"
             android:label="@string/jnt_type_select_fragment_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateVisible">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <data
@@ -48,7 +51,92 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DatabaseActivity"/>
+
+        <activity
+            android:name=".ThreeArmJntActivity"
+            android:label="@string/three_arm_jnt_activity_name"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PhotoActivity"
+            android:label="@string/photo_activity_name">
+            <intent-filter>
+                <action android:name="com.example.delaneyt.trafficcountapp.PhotoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GPSTrackingActivity"
+            android:label="@string/gps_activity_name" >
+            <intent-filter>
+                <action android:name="com.example.delaneyt.trafficcountapp.GPSTrackingActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DbJntAddActivity"
+            android:label="@string/db_jnt_add_activity_name" >
+            <intent-filter>
+                <action android:name="com.example.delaneyt.trafficcountapp.DbJntAddActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
+
+<!--
+android:theme="@style/AppTheme"
+        <activity
+            android:name=".ThreeArmJntActivity"
+            android:label="@string/three_arm_jnt_activity_name"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+
+
+        </activity>
+        <activity android:name=".activities.MyActivity"
+            android:label="@string/my_activity_title"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.example.myapp.activities.MyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        -->
+
+
+
+
+
+
+        <activity
+            android:name=".FourArmJntActivity"
+            android:label="@string/four_arm_jnt_activity_name"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 </manifest>

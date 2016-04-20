@@ -41,8 +41,8 @@ public class JntTypeSelectFragment extends Fragment {
 
     // Creates an array of resource image files which is a private instance to this class
     private ArrayList<Integer> mThumbIdsJuntions = new ArrayList<>(
-            Arrays.asList(R.drawable.three_arm_jnt, R.drawable.four_arm_jnt,
-                    R.drawable.staggered_jnt));
+            Arrays.asList(R.drawable.jnt_three_arm, R.drawable.jnt_four_arm,
+                    R.drawable.jnt_staggard));
 
     /**
      * Returns a gridView of images inflated from the juntion_type_fragmentgment.xml layout and starts
@@ -62,7 +62,7 @@ public class JntTypeSelectFragment extends Fragment {
         Log.i(TAG, "The view is visible and about to be created.");
 
         // references the resource file to inflate view
-        View rootView = inflater.inflate(R.layout.juntion_type_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.frag_jnt_type_select, container, false);
         GridView gridview = (GridView) rootView.findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(getActivity(), mThumbIdsJuntions));
 
@@ -70,15 +70,25 @@ public class JntTypeSelectFragment extends Fragment {
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
+                if(position == 0) {
+                    //Create an Intent to start the CountActivity
+                    Intent intent = new Intent(getActivity(), ThreeArmJntActivity.class);
 
-                //Create an Intent to start the CountActivity
-                Intent intent = new Intent(getActivity(), CountActivity.class);
+                    // Add the positon of the thumbnail selected as an Intent Extra
+//                intent.putExtra("positionOfImageSelected", position);
 
-                // Add the ID of the thumbnail to display as an Intent Extra
-                intent.putExtra(EXTRA_RES_ID, (int) id);
+                    // Add the ID of the thumbnail to display as an Intent Extra
+                    intent.putExtra(EXTRA_RES_ID, (int) id);
 
-                // Start the CountActivity
-                startActivity(intent);
+                    // Start the CountActivity
+                    startActivity(intent);
+                }
+
+                else if(position == 1) {
+                    Intent intent = new Intent(getActivity(), FourArmJntActivity.class);
+                    intent.putExtra(EXTRA_RES_ID, (int) id);
+                    startActivity(intent);
+                }
 
                 // Tag marker for this activity
                 Log.i(TAG, "The activity is visible has been started.");

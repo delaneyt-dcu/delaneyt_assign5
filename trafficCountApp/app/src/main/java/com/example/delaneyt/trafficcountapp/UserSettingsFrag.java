@@ -1,5 +1,6 @@
 package com.example.delaneyt.trafficcountapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -107,7 +108,6 @@ public class UserSettingsFrag extends PreferenceFragment implements SharedPrefer
             }
         }
     }
-
 
 //    @Override
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container,

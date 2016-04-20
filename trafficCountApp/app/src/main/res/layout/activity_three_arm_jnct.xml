@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:background="@drawable/three_arm_jnt"
-tools:context=".MainActivity" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jnt_three_arm"
+    tools:context=".MainActivity" >
 
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/imageButtonCtoA"
-        android:background="@drawable/right_arrow"
-        android:contentDescription="@string/right"
+        android:id="@+id/imageButton_CtoA"
+        android:background="@drawable/arrow_c_to_a"
+        android:contentDescription="@string/arrow_c_to_a"
         android:layout_alignParentBottom="false"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="22dp"
@@ -22,20 +22,20 @@ tools:context=".MainActivity" >
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:id="@+id/imageButton_CtoB"
-        android:background="@drawable/rightdown_arrow"
-        android:contentDescription="@string/rightdown"
-        android:layout_below="@+id/imageButtonCtoA"
+        android:background="@drawable/arrow_c_to_b"
+        android:contentDescription="@string/arrow_c_to_b"
+        android:layout_below="@+id/imageButton_CtoA"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
-        android:layout_alignLeft="@+id/imageButtonCtoA"
+        android:layout_alignLeft="@+id/imageButton_CtoA"
         android:layout_marginTop="10dp" />
 
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:id="@+id/imageButton_BtoC"
-        android:background="@drawable/leftup_arrow"
-        android:contentDescription="@string/leftup"
+        android:background="@drawable/arrow_b_to_c"
+        android:contentDescription="@string/arrow_b_to_c"
         android:layout_below="@+id/imageButton_CtoB"
         android:layout_toRightOf="@+id/imageButton_CtoB"
         android:layout_toEndOf="@+id/imageButton_CtoB"
@@ -45,8 +45,8 @@ tools:context=".MainActivity" >
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:id="@+id/imageButton_BtoA"
-        android:background="@drawable/rightup_arrow"
-        android:contentDescription="@string/rightup"
+        android:background="@drawable/arrow_b_to_a"
+        android:contentDescription="@string/arrow_b_to_a"
         android:layout_alignTop="@+id/imageButton_BtoC"
         android:layout_toRightOf="@+id/imageButton_BtoC"
         android:layout_toEndOf="@+id/imageButton_BtoC"
@@ -57,8 +57,8 @@ tools:context=".MainActivity" >
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:id="@+id/imageButton_AtoC"
-        android:background="@drawable/left_arrow"
-        android:contentDescription="@string/left"
+        android:background="@drawable/arrow_a_to_c"
+        android:contentDescription="@string/arrow_a_to_c"
         android:layout_alignBottom="@+id/textViewVehsCtoA"
         android:layout_toRightOf="@+id/imageButton_BtoA"
         android:layout_toEndOf="@+id/imageButton_BtoA" />
@@ -67,8 +67,8 @@ tools:context=".MainActivity" >
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:id="@+id/imageButton_AtoB"
-        android:background="@drawable/leftdown_arrow"
-        android:contentDescription="@string/leftdown"
+        android:background="@drawable/arrow_a_to_b"
+        android:contentDescription="@string/arrow_a_to_b"
         android:layout_above="@+id/imageButton_BtoA"
         android:layout_toRightOf="@+id/imageButton_BtoA"
         android:layout_toEndOf="@+id/imageButton_BtoA"
@@ -149,8 +149,8 @@ tools:context=".MainActivity" >
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/imageButtonCtoA"
-        android:layout_alignLeft="@+id/imageButtonCtoA"
+        android:layout_alignTop="@+id/imageButton_CtoA"
+        android:layout_alignLeft="@+id/imageButton_CtoA"
         android:layout_marginTop="20dp" />
 
     <EditText
@@ -187,9 +187,10 @@ tools:context=".MainActivity" >
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:inputType="textPersonName"
         android:text="@string/armC_name"
-        android:ems="10"
-        android:rotation="1"
         android:id="@+id/editTextArmCName"
+        android:ems="10"
+
+
         android:layout_above="@+id/textViewVehsCtoB"
         android:layout_toStartOf="@+id/button_AddToDb"
         android:layout_toLeftOf="@+id/button_AddToDb"
@@ -205,23 +206,23 @@ tools:context=".MainActivity" >
         android:layout_below="@+id/imageButton_AtoC"
         android:layout_centerHorizontal="true" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:id="@+id/button_AddToDb"
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add"
+        android:id="@+id/button_AddToDb"
 
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
- <!--
-        <VerticalTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical"
-            android:background="@color/feedback_background"
-            android:padding="4dip"
-            android:text="@string/feedback"
-            android:textColor="@color/feedback_text_color"
-            android:textSize="@dimen/text_xlarge" />-->
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <!--
+           <VerticalTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left|center_vertical"
+               android:background="@color/feedback_background"
+               android:padding="4dip"
+               android:text="@string/feedback"
+               android:textColor="@color/feedback_text_color"
+               android:textSize="@dimen/text_xlarge" />-->
 
 </RelativeLayout>

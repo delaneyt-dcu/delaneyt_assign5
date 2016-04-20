@@ -14,11 +14,11 @@
         android:baselineAligned="false"
         android:layout_above="@+id/button_add">
 
-        <fragment android:name="com.example.delaneyt.trafficcountapp.TJunctFrag"
+        <fragment android:name="com.example.delaneyt.trafficcountapp.ThreeArmJntActivity"
             android:id="@+id/t_jnt"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            tools:layout="@layout/frag_t_junct" />
+            tools:layout="@layout/activity_three_arm_jnt" />
     </LinearLayout>
 
     <android.support.v7.widget.Toolbar
@@ -32,8 +32,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rugby_reset_button"
-        android:id="@+id/resetButton"
+        android:text="@string/reset_button"
+        android:id="@+id/button_ResetCountData"
         android:minWidth="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

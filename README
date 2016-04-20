@@ -62,3 +62,24 @@ Work to be done next week:
 			setContentView(R.layout.frag_cross_junct);
 		else
 			setContentView(R.layout.testing_fragment);
+
+160409 - Fourth Commit
+Work done last week:
+	Got the various junction types to inflate and active following the user selecting  an image from the GridView fragment.
+	Managed to activate an intent from the sharedpreference xml (but wasn't able to get the previous button image to do this but instead the user has to click on the text).
+	Worked on the layouts to make them more screen size and oritation friendly.
+	Can now get gps long and lat for my position and add these with all other location preferences to their Location_Table in the db.
+	Can also take picture of the junction.
+I have one problem with my code which i am stuck on. I have all the code in place to upload a "testImageBitmap" to my database and am able to retrieve it from the db in the form of a Blob.
+Problem is when I replace the "testImageBitmap" with the actual photo taken. I cant get a value to the mImageBitmap variable used in your PhotoIntentActivity app. I changed mImageBitmap
+varible from private to public in your activity class and even tried to insert a getImageForDb method which I call within my DbJntAdd activity but it seems to return with a null exception
+which crashes the app. I'm going to skip this for the moment and work on other aspects of my app and maybe return to it if there is time.
+
+Work to be done next week
+Repeat code for all my shared preferences (ie get them to add to their associated tables in the db.)
+Maybe work on inserting a countdown clock (currently I simply use a digital clock widget).
+Work on the report
+Work on my slides
+Work on my screencast
+Work on tidying up and beautifying my app if there is time
+Submit
