@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import java.util.List;
 
 /**
- * Contains formatting parameters used by the CountActivity
+ * Contains formatting parameters used by the JntTypeSelectFragment
  *
  * <p>This class is called by explicit intent initiated by a clickable thumbprint image.
  * This class does not launch a screen/activity.</p>
@@ -19,8 +19,8 @@ import java.util.List;
  * ref project: UIGrdLayout.java)</p>
  *
  *  @author Tim Delaney
- *  @version 2.0
- *  @since 2016-01-20
+ *  @version 1.0
+ *  @since 2016-04-20
  *  @see "UIGridLayout" demo by Adam Porter available at:
  *  @see <a href="http://developer.android.com/guide/topics/ui/layout/gridview.html"</a>
  */

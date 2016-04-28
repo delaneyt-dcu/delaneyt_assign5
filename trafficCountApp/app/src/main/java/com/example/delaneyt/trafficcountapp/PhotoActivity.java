@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,16 +15,30 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.Preference;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+/**
+ * Class which allows the user to use the devices camera to take a photo
+ *
+ * <p> This class allows the user to to take a photo, save it and view the saved image
+ *
+ * <p><b>Credit is attributed to Colette Kirwan of DCU for the code used in this class</b></p>
+ *
+ * @author Tim Delaney
+ * @version 1.0
+ * @since 2016-04-20
+ * @see "PhotIntentActivity" demo by Colette Kirwan availble on DCU's SDA github
+ */
+public class PhotoActivity extends AppCompatActivity {
 
-public class PhotoActivity extends Activity {
-
+    // Variables declared and initialised
     private static final int ACTION_TAKE_PHOTO_B = 1;
     private static final String BITMAP_STORAGE_KEY = "viewbitmap";
     private static final String IMAGEVIEW_VISIBILITY_STORAGE_KEY = "imageviewvisibility";
@@ -37,12 +49,18 @@ public class PhotoActivity extends Activity {
     private static final String JPEG_FILE_SUFFIX = ".jpg";
     private AlbumStorageDirFactory mAlbumStorageDirFactory = null;
 
-
-    /* Photo album for this application */
+    /**
+     * Method to get name photo album for this application
+     * @return String name of album
+     */
     private String getAlbumName() {
         return getString(R.string.album_name);
     }
 
+    /**
+     * Method to get file directory photo album for this application
+     * @return File directory of album if it exists
+     */
     private File getAlbumDir() {
         File storageDir = null;
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
@@ -61,15 +79,23 @@ public class PhotoActivity extends Activity {
         return storageDir;
     }
 
+    /**
+     * Method to create an image file name
+     * @return File name of image file
+     * @throws IOException
+     */
     private File createImageFile() throws IOException {
-        // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = JPEG_FILE_PREFIX + timeStamp + "_";
         File albumF = getAlbumDir();
-        File imageF = File.createTempFile(imageFileName, JPEG_FILE_SUFFIX, albumF);
-        return imageF;
+        return File.createTempFile(imageFileName, JPEG_FILE_SUFFIX, albumF);
     }
 
+    /**
+     * Method to set up a phot file
+     * @return File photo file name
+     * @throws IOException
+     */
     private File setUpPhotoFile() throws IOException {
         File f = createImageFile();
         mCurrentPhotoPath = f.getAbsolutePath();
@@ -122,14 +148,13 @@ public class PhotoActivity extends Activity {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         switch(actionCode) {
             case ACTION_TAKE_PHOTO_B:
-                File f = null;
+                File f;
                 try {
                     f = setUpPhotoFile();
                     mCurrentPhotoPath = f.getAbsolutePath();
                     takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
                 } catch (IOException e) {
                     e.printStackTrace();
-                    f = null;
                     mCurrentPhotoPath = null;
                 }
                 break;
@@ -157,7 +182,15 @@ public class PhotoActivity extends Activity {
                 }
             };
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     * Saves the state of the application in a bundle based on the value of the savedInstance State
+     * and carries out button intent actions.
+     *
+     * @param savedInstanceState can be passed back to onCreate if the activity needs to be created
+     *                           (e.g., orientation change) so that you don't lose this prior
+     *                           information. If no data was supplied, savedInstanceState is null.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -198,22 +231,14 @@ public class PhotoActivity extends Activity {
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         mImageBitmap = savedInstanceState.getParcelable(BITMAP_STORAGE_KEY);
         mImageView.setImageBitmap(mImageBitmap);
         mImageView.setVisibility(
                 savedInstanceState.getBoolean(IMAGEVIEW_VISIBILITY_STORAGE_KEY) ?
                         ImageView.VISIBLE : ImageView.INVISIBLE
-        );
-        }
-    public Bitmap getImageForDb() {
-        Bitmap myImageForDb = mImageBitmap;
-        return myImageForDb;
-
-
-    }
-
+        );}
 
     /**
      * Indicates whether the specified action can be used as an intent. This
@@ -249,5 +274,22 @@ public class PhotoActivity extends Activity {
                     getText(R.string.cannot).toString() + " " + btn.getText());
             btn.setClickable(false);
         }
+    }
+
+    /**
+     * Returns user to previous screen with up arrow set to act like a back arrow
+     * @param item represent the menu item clicked, the up arrow in this case
+     * @return boolean true if clicked to return user to previous screen
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

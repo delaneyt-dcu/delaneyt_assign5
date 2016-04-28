@@ -3,27 +3,27 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@color/lightGrey">
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        >
+        android:layout_width="match_parent">
         <Button
             android:text="@string/btnTakePhoto"
             android:id="@+id/btnTakePhoto"
             android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1" />
+            android:layout_width="fill_parent"
+            android:layout_margin="10dp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/btnShowLocation"
-            android:id="@+id/btnShowLocation"
-            android:layout_weight="1" />
+
+
+
+
+
 
     </LinearLayout>
+
     <ImageView
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"

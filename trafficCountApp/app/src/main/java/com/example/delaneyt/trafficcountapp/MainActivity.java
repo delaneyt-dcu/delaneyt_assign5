@@ -20,22 +20,29 @@ import com.example.delaneyt.trafficcountapp.view.*;
 
 /**
  *
- * <h1>TDAssignFour is a School App</h1> used for sharing info such as Events, Pics, a Rugby Match
- * tool and saves user settings
+ * <h1>TDAssignFive is a TrafficCountApp for end of year project</h1> used for conducting a traffic
+ *  survey which saves user settings and uploads the count data to a SQLite Database
  *
  * <p>
- * The App contains 2 activities. This MainActivity class contains the launch activity and inflates
- * the Match Fragment upon launchThe launch activity has 4 tabs each displaying a fragment. An Art
- * activity is used to enlarge a view of a thumbprint using a ImageAdapter.</p>
+ * This MainActivity class is the launch activity and inflates the UserSettingFrag upon launch.
+ * The launch activity has 4 tabs each displaying a fragment namely User, Location, Survey and
+ * Junction.</p>
  *
  * @author Tim Delaney
- * @version 2.0
- * @since 2016-01-20
+ * @version 1.0
+ * @since 2016-04-20
  * @see "TabFragPager" demo by Colette Kirwan availble on DCU's SDA github
  * @see "UIGridLayout" demo by Adam Porter avauilable at:
  * @see <a href="http://developer.android.com/guide/topics/ui/layout/gridview.html"</a>
+ * @see "Android GPS, Location Manager Tutorial" by Ravi Tamada at:
+ * @see <a href="http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/"</a>
+ * @see "Creating a Date Picker" by developer.android.com at:
+ * @see <a href="http://developer.android.com/guide/topics/ui/controls/pickers.html"</a>
  */
 public class MainActivity extends android.support.v7.app.AppCompatActivity {
+
+
+
 
     //Debug Tag for use logging debug output to LogCat
     private final String TAG = "MainActivity";
@@ -53,9 +60,9 @@ public class MainActivity extends android.support.v7.app.AppCompatActivity {
         // Set event's date and time here, (YYYY, M, D, H, Min)
         // Note: Jan = 0, Feb = 1, etc
         Calendar beginTime = Calendar.getInstance();
-        beginTime.set(2016, 1, 19, 7, 30);
+        beginTime.set(2016, 3, 29, 4, 30);
         Calendar endTime = Calendar.getInstance();
-        endTime.set(2016, 1, 19, 8, 30);
+        endTime.set(2016, 3, 29, 5, 30);
 
         //Implicit intent to open system's calendar
         Intent mCalendarIntent = new Intent(Intent.ACTION_INSERT)
@@ -91,7 +98,7 @@ public class MainActivity extends android.support.v7.app.AppCompatActivity {
                 .setContentText(context.getString(R.string.notification_text))
                 .setAutoCancel(true)
 
-                        // giving it the bells and whistles
+                // giving it the bells and whistles
                 .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE | Notification.DEFAULT_LIGHTS);
     }
 
@@ -100,8 +107,6 @@ public class MainActivity extends android.support.v7.app.AppCompatActivity {
     protected ViewPager viewPager;
     protected ArrayList<Fragment> fragments;
     protected ActionTabsViewPagerAdapter myViewPageAdapter;
-    protected android.support.v4.app.Fragment counterA;
-    protected android.support.v4.app.Fragment counterB;
 
     /**
      * Method override called when the activity is first created.
@@ -113,13 +118,6 @@ public class MainActivity extends android.support.v7.app.AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            //Restore the fragment's instance
-            counterA = getSupportFragmentManager().getFragment(
-                    savedInstanceState, "Team_A");
-            counterB = getSupportFragmentManager().getFragment(
-                    savedInstanceState, "Team_B");
-        }
         setContentView(R.layout.activity_main);
 
         // Define SlidingTabLayout (shown at top) and ViewPager (shown at bottom) in the layout.
@@ -133,8 +131,6 @@ public class MainActivity extends android.support.v7.app.AppCompatActivity {
         fragments.add(new LocationSettingsFrag());
         fragments.add(new SurveySettingsFrag());
         fragments.add(new JntTypeSelectFragment());
-
-
 
         // use FragmentPagerAdapter to bind the slidingTabLayout (tabs with different titles)
         // and ViewPager (different pages of fragment) together.

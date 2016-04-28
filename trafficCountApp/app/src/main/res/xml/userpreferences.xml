@@ -34,6 +34,18 @@
             android:inputType="textEmailAddress"
             android:dialogTitle="@string/dialog_title_email_preference" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/add_to_db_preferences">
+        <Preference
+            android:key="db_user_button"
+            android:title="@string/title_add_to_user_table_preference"
+            android:summary="@string/summary_add_to_db_preference">
+            <intent android:action="com.example.delaneyt.trafficcountapp.AddToUserTableActivity"/>
+        </Preference>
+    </PreferenceCategory>
+
+
     <!--
        <PreferenceCategory
            android:title="@string/location_detail_preferences">

@@ -1,28 +1,29 @@
 package com.example.delaneyt.trafficcountapp;
 
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
- * Created by delaneyt on 13/03/2016.
+ *  Class which stores a series of Shared User Preferences
+ *
+ *  <p> This class holds values that can be used within the AddUserTableActivity</p>
+ *
+ *  Created by delaneyt on 18/04/2016.
  */
 public class UserSettingsFrag extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     /**
-     * Sets the screen's view including tabs and fragment. No return.
+     * Called when the activity is first created.
+     * Saves the state of the application in a bundle based on the value of the savedInstance State
+     * and carries out button intent actions.
      *
-     * @param savedInstanceState is a reference to a Bundle object that is passed into the onCreate
-     * method of every Android Activity
+     * @param savedInstanceState can be passed back to onCreate if the activity needs to be created
+     *                           (e.g., orientation change) so that you don't lose this prior
+     *                           information. If no data was supplied, savedInstanceState is null.
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,33 +32,6 @@ public class UserSettingsFrag extends PreferenceFragment implements SharedPrefer
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.userpreferences);
         getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
-
-
-//        Preference button = (Preference)getPreferenceManager().findPreference("next_button");
- //       if (button != null) {
- //           button.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
- //               @Override
- //               public boolean onPreferenceClick(Preference arg0) {
- //                   //finish();
-//                    Intent intent = new Intent(getActivity(), LocationSettingsActivity.class);
-//                    startActivity(intent);
-//                    return true;
-//                }
-//            });
-//        }
-
-//        Preference button = (Preference)findPreference("next_button");
-//        button.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
- //           @Override
- //           public boolean onPreferenceClick(Preference preference) {
-//                //code for what you want it to do
-//                Intent intent = new Intent(getActivity(), LocationSettingsActivity.class);
-//                    startActivity(intent);
-//                return true;
-//            }
-//        });
-
-
     }
 
     /**
@@ -108,42 +82,4 @@ public class UserSettingsFrag extends PreferenceFragment implements SharedPrefer
             }
         }
     }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-
-//        View view = inflater.inflate(R.layout.preference_next_button, container, false);
-
-//        Button button = (Button)view.findViewById(R.id.nextButton);
-//        button.setOnClickListener(new View.OnClickListener()
- //       {
-//            @Override
-//            public void onClick(View v){
-//                switch(v.getId()){
-
-//                    case R.id.nextButton:
-//                        Intent intent = new Intent(getActivity(), LocationSettingsActivity.class);
-//                        startActivity(intent);
-//                        break;
-//                }
-//            }
-//        });
-
- //       return view;
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

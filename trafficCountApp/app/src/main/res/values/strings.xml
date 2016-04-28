@@ -8,79 +8,72 @@
     <string name="internal_file_write_read_activity_name">Data Saved</string>
     <string name="photo_activity_name">Junction Photo</string>
     <string name="gps_activity_name">Junction GPS Location</string>
-    <string name="db_jnt_add_activity_name">Database Junction Table</string>
+    <string name="add_to_jnt_table_activity_name">Database Junction Table</string>
+    <string name="add_to_user_table_activity_name">Database User Table</string>
+    <string name="add_to_survey_table_activity_name">Database Survey Table</string>
 
     <!-- Preference Strings -->
     <!-- User Details -->
     <string name="user_detail_preferences">User Details</string>
-
     <string name="title_employee_member_preference">Direct Employee?</string>
-
     <string name="title_employee_number_preference">Employee Number*</string>
-    <string name="summary_employee_number_preference">enter employee no. here</string>
-    <string name="dialog_title_employee_number_preference">Enter your Employee No.</string>
-
+    <string name="summary_employee_number_preference">An Employee No. is Mandatory</string>
+    <string name="dialog_title_employee_number_preference">Enter your Employee No. (Numbers Only)</string>
     <string name="title_username_preference">Full Name</string>
     <string name="summary_username_preference">enter your full name here</string>
     <string name="dialog_title_username_preference">Enter your full name</string>
-
     <string name="opional_user_detail_preferences">Optional Details</string>
-
     <string name="title_employment_grade_preference">Employment Grade</string>
     <string name="summary_employment_grade_preference">enter your employment grade here</string>
-
     <string name="title_email_preference">Email</string>
     <string name="summary_email_preference">enter email here</string>
     <string name="dialog_title_email_preference">Enter your email</string>
-
     <string name="title_next_preference">Location Details</string>
     <string name="summary_next_preference">press NEXT for Location Details</string>
     <string name="button_title_next">NEXT</string>
+    <string name="title_add_to_user_table_preference">Add to User Table</string>
+    <string name="summary_add_to_user_table_preference">press here to add to database table</string>
 
     <!-- Location Details -->
     <string name="location_detail_preferences">Location Details</string>
-
     <string name="title_town_preference">City/Town</string>
     <string name="summary_town_preference">enter city/town here</string>
     <string name="dialog_title_town_preference">Enter city/town</string>
-
     <string name="title_county_preference">County</string>
     <string name="summary_county_preference">enter county here</string>
     <string name="dialog_title_county_preference">Enter county</string>
-
     <string name="optional_location_detail_preferences">Optional Details</string>
-
     <string name="title_gps_preference">GPS Location</string>
     <string name="summary_gps_preference">press GPS for coordinates</string>
     <string name="button_title_gps">GPS</string>
-
     <string name="title_photo_preference">Site Photo</string>
     <string name="summary_photo_preference">press PHOTO for camera</string>
     <string name="button_title_photo">PHOTO</string>
     <string name="photo_button">my_photo_button</string>
     <string name="btnShowLocation">Show Location</string>
-
     <string name="add_to_db_preferences">Add To Database</string>
     <string name="title_add_to_db_preference">Add To Junction Table</string>
     <string name="summary_add_to_db_preference">press to add to database table</string>
-
     <string name="title_junction_arm_preference">Arm Names</string>
     <string name="title_arm_preference">Arm Names</string>
-    <string name="title_arm1_preference">Arm 1</string>
-    <string name="summary_arm1_preference">enter Arm 1 name here</string>
-    <string name="dialog_arm1_preference">Enter Arm 1 name</string>
-    <string name="title_arm2_preference">Arm 2</string>
-    <string name="summary_arm2_preference">enter Arm 2 name here</string>
-    <string name="dialog_arm2_preference">Enter Arm 2 name</string>
-    <string name="title_arm3_preference">Arm 3</string>
-    <string name="summary_arm3_preference">enter Arm 3 name here</string>
-    <string name="dialog_arm3_preference">Enter Arm 3 name</string>
-    <string name="title_arm4_preference">Arm 4</string>
-    <string name="summary_arm4_preference">enter Arm 4 name here</string>
-    <string name="dialog_arm4_preference">Enter Arm 4 name</string>
-
+    <string name="title_armA_preference">Arm A</string>
+    <string name="summary_armA_preference">enter Arm A name here</string>
+    <string name="dialog_armA_preference">Enter Arm A name</string>
+    <string name="title_armB_preference">Arm B</string>
+    <string name="summary_armB_preference">enter Arm B name here</string>
+    <string name="dialog_armB_preference">Enter Arm B name</string>
+    <string name="title_armC_preference">Arm C</string>
+    <string name="summary_armC_preference">enter Arm C name here</string>
+    <string name="dialog_armC_preference">Enter Arm C name</string>
+    <string name="title_armD_preference">Arm D</string>
+    <string name="summary_armD_preference">enter Arm D name here</string>
+    <string name="dialog_armD_preference">Enter Arm D name</string>
     <string name="title_count_next_preference">Count Details</string>
     <string name="summary_count_next_preference">Press NEXT for Count Details</string>
+
+    <!-- Add To Database Activity  -->
+    <string name="button_add_data">Add</string>
+    <string name="button_view_data">View</string>
 
     <!-- Photo Activity  -->
     <string name="btnTakePhoto">Take Photo</string>
@@ -89,43 +82,39 @@
 
     <!-- Traffic Survey Details -->
     <string name="survey_detail_preferences">Traffic Survey Details</string>
-
     <string name="title_date_preference">Survey Date</string>
     <string name="summary_date_preference">enter survey date here</string>
     <string name="dialog_date_preference">Enter Date</string>
-
     <string name="title_start_time_preference">Start Time</string>
     <string name="summary_start_time_preference">enter start time here</string>
     <string name="dialog_start_time_preference">Enter start time</string>
-
     <string name="title_end_time_preference">End Time</string>
     <string name="summary_end_time_preference">enter end time here</string>
     <string name="dialog_end_time_preference">Enter End Time</string>
-
     <string name="optional_survey_detail_preferences">Optional Details</string>
-
     <string name="title_weather_preference">Weather</string>
     <string name="summary_weather_preference">enter current weather here</string>
-
     <string name="title_surface_preference">Road Surface</string>
     <string name="summary_surface_preference">enter current road suface conditions here</string>
+    <string name="title_add_to_survey_table_preference">Optional Details</string>
 
     <!-- Junction Fragment Strings -->
     <string name="enter_arm_a">Arm A</string>
     <string name="enter_arm_b">Arm B</string>
     <string name="enter_arm_c">Arm C</string>
     <string name="enter_arm_d">Arm D</string>
-
     <string name="armA_name">Arm A</string>
     <string name="armB_name">Arm B</string>
     <string name="armC_name">Arm C</string>
     <string name="armD_name">Arm D</string>
-
     <string name="button_add">Add</string>
+    <string name="reset_button">RESET</string>
     <string name="view_all">View All</string>
+    <string name="Timer">Timer</string>
+    <string name="Start">Start</string>
+    <string name="Stop">Stop</string>
     <string name="count_text">0</string>
     <string name="take_photo">Photo</string>
-
     <string name="arrow_a_to_b">AtoB Arrow</string>
     <string name="arrow_a_to_c">AtoC Arrow</string>
     <string name="arrow_a_to_d">AtoD Arrow</string>
@@ -139,54 +128,14 @@
     <string name="arrow_d_to_b">DtoB Arrow</string>
     <string name="arrow_d_to_c">DtoC Arrow</string>
 
-    <!-- Tester Springs imported for assignment 4 -->
-    <string name="jnt_type_select_fragment_name">Junction Type Selection</string>
-
     <!-- Notification Strings (Note: change dates within MainActivity method-->
-    <string name="notification_title">School Notification</string>
+    <string name="notification_title">Traffic Count Notification</string>
     <string name="notification_text">Notification: Save a date in your diary</string>
-    <string name="events_title">School Event</string>
-    <string name="event_location">Student Union, DCU</string>
-
-    <!-- Event Strings -->
-    <string name="ui_event_location">Welcome to DCUs Secondary School</string>
-    <string name="ui_event_title">Upcoming Christmas Party</string>
-    <string name="ui_event_date_time">Dec 18th Dec 10:00pm-06:30am</string>
-    <string name="ui_event_picture">Event picture</string>
-
-    <!-- Match Fragment Strings -->
-    <string name="enter_team_a">Enter Team A</string>
-    <string name="enter_team_b">Enter Team B</string>
-    <string name="score_text_a">0</string>
-    <string name="score_text_b">0</string>
-    <string name="penalty_button_a">+3 PENALTY</string>
-    <string name="penalty_button_b">+3 PENALTY</string>
-    <string name="conversion_button_a">+2 CONVERSION</string>
-    <string name="conversion_button_b">+2 CONVERSION</string>
-    <string name="land_con_button_a">+2 CON</string>
-    <string name="land_con_button_b">+2 CON</string>
-    <string name="try_button_a">+5 TRY</string>
-    <string name="try_button_b">+5 TRY</string>
-    <string name="save_data_button">SAVE DATA</string>
-    <string name="reset_button">RESET</string>
-    <string name="rugby_email_button">EMAIL</string>
-
-    <!-- Preference Strings -->
-    <string name="application_preferences">Application Preferences</string>
-
-    <string name="title_password_preference">Password</string>
-    <string name="summary_password_preference">cvfdfdfdfdff</string>
-    <string name="dialog_title_password_preference">Enter your password</string>
-
-    <string name="title_student_member_preference">Student Member</string>
+    <string name="events_title">Traffic Count</string>
+    <string name="event_location">Junction</string>
 
     <!-- Menu Strings -->
     <string name="ui_menu_notify">notify</string>
     <string name="ui_menu_event">event</string>
     <string name="ui_menu_share">share</string>
-
-
-
-
-
 </resources>

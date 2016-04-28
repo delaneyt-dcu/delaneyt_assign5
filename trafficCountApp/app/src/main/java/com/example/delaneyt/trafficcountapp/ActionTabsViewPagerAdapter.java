@@ -15,8 +15,8 @@ import java.util.ArrayList;
  * <<p><b>Credit is attributed to Colette Kirwan of DCU for the code used in this class</b></p>
  *
  * @author Tim Delaney
- * @version 2.0
- * @since 2016-01-20
+ * @version 1.0
+ * @since 2016-04-20
  * @see "TabFragPager" demo by Colette Kirwan availble on DCU's SDA github
  */
 public class ActionTabsViewPagerAdapter extends FragmentPagerAdapter {

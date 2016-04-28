@@ -23,24 +23,30 @@
             android:persistent="false">
             <EditTextPreference
                 android:key="arm_a_preference"
-                android:title="@string/title_arm1_preference"
-                android:summary="@string/summary_arm1_preference"
-                android:dialogTitle="@string/dialog_arm1_preference" />
+                android:title="@string/title_armA_preference"
+                android:summary="@string/summary_armA_preference"
+                android:dialogTitle="@string/dialog_armA_preference" />
             <EditTextPreference
                 android:key="arm_b_preference"
-                android:title="@string/title_arm2_preference"
-                android:summary="@string/summary_arm2_preference"
-                android:dialogTitle="@string/dialog_arm2_preference" />
+                android:title="@string/title_armB_preference"
+                android:summary="@string/summary_armB_preference"
+                android:dialogTitle="@string/dialog_armB_preference" />
             <EditTextPreference
                 android:key="arm_c_preference"
-                android:title="@string/title_arm3_preference"
-                android:summary="@string/summary_arm3_preference"
-                android:dialogTitle="@string/dialog_arm3_preference" />
+                android:title="@string/title_armC_preference"
+                android:summary="@string/summary_armC_preference"
+                android:dialogTitle="@string/dialog_armC_preference" />
             <EditTextPreference
                 android:key="arm_d_preference"
-                android:title="@string/title_arm4_preference"
-                android:summary="@string/summary_arm4_preference"
-                android:dialogTitle="@string/dialog_arm4_preference" />
+                android:title="@string/title_armD_preference"
+                android:summary="@string/summary_armD_preference"
+                android:dialogTitle="@string/dialog_armD_preference" />
+            <PreferenceCategory
+                android:title="Arm Naming Convention">
+                <PreferenceScreen
+                    android:widgetLayout="@layout/preference_arm_naming_sketch">
+                </PreferenceScreen>
+            </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
 
@@ -67,13 +73,7 @@
             android:key="db_jnt_button"
             android:title="@string/title_add_to_db_preference"
             android:summary="@string/summary_add_to_db_preference">
-            <intent android:action="com.example.delaneyt.trafficcountapp.DbJntAddActivity"/>
+            <intent android:action="com.example.delaneyt.trafficcountapp.AddToJntTableActivity"/>
         </Preference>
     </PreferenceCategory>
-
-    <!--
-    android:widgetLayout="@layout/preference_photo_button"
-    android:widgetLayout="@layout/preference_gps_button"
-   -->
-
    </PreferenceScreen>

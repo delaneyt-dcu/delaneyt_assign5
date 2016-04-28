@@ -13,6 +13,20 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 
+/**
+ *  Finds the GPS coordinates of the user
+ *
+ *  <p> This class is used by the GPSTracking Activity class and will return the users GPS location</p>
+ *
+ *  <p><b>References: </b>The origins of the code used in this class is accredited to Ravi Tamada
+ *  ref: Android GPS, Location Manager Tutorial </p>
+ *
+ *  @author Tim Delaney
+ *  @version 1.0
+ *  @since 2016-04-20
+ *  @see "Android GPS, Location Manager Tutorial" by Ravi Tamada at:
+ *  @see <a href="http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/"</a>
+ */
 public class GPSTracker extends Service implements LocationListener {
 
     private final Context mContext;
@@ -34,7 +48,7 @@ public class GPSTracker extends Service implements LocationListener {
     private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10; // 10 meters
 
     // The minimum time between updates in milliseconds
-    private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1; // 1 minute
+    private static final long MIN_TIME_BW_UPDATES = 1000 * 60; // 1 minute
 
     // Declaring a Location Manager
     protected LocationManager locationManager;
@@ -116,7 +130,8 @@ public class GPSTracker extends Service implements LocationListener {
 
     /**
      * Function to get latitude
-     * */
+     * @return a double variable of the latitude
+     */
     public double getLatitude(){
         if(location != null){
             latitude = location.getLatitude();
@@ -128,7 +143,8 @@ public class GPSTracker extends Service implements LocationListener {
 
     /**
      * Function to get longitude
-     * */
+     * @return a double variable of the longitude
+     */
     public double getLongitude(){
         if(location != null){
             longitude = location.getLongitude();

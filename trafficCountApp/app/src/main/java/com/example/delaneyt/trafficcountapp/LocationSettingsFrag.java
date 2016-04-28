@@ -1,29 +1,51 @@
 package com.example.delaneyt.trafficcountapp;
 
-import android.content.Intent;
+import android.app.ActionBar;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
+import android.preference.PreferenceScreen;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Display;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.Toolbar;
 
 /**
- * Created by delaneyt on 18/03/2016.
+ *  Class which stores a series of Shared Location Preferences
+ *
+ *  <p> This class holds values that can be used within the AddJntTableActivity</p>
+ *
+ *  Created by delaneyt on 18/04/2016.
  */
 public class LocationSettingsFrag extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     /**
-     * Sets the screen's view including tabs and fragment. No return.
+     * Called when the activity is first created.
+     * Saves the state of the application in a bundle based on the value of the savedInstance State
+     * and carries out button intent actions.
      *
-     * @param savedInstanceState is a reference to a Bundle object that is passed into the onCreate
-     * method of every Android Activity
+     * @param savedInstanceState can be passed back to onCreate if the activity needs to be created
+     *                           (e.g., orientation change) so that you don't lose this prior
+     *                           information. If no data was supplied, savedInstanceState is null.
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.locationpreferences);
         getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
     }
@@ -38,6 +60,7 @@ public class LocationSettingsFrag extends PreferenceFragment implements SharedPr
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         updatePreference(findPreference(key));
     }
+
     public void onResume()
     {
         super.onResume();

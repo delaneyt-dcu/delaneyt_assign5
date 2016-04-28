@@ -8,11 +8,12 @@
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/lightGrey"
         android:columnWidth="90dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp" />
-
+        android:verticalSpacing="10dp"
+        android:fastScrollAlwaysVisible="false" />
 </LinearLayout>
